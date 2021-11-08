@@ -12,4 +12,4 @@ Scope <br />
 -A relational database used to persist data <br />
 -A build of the application using an integrated build tool <br />
 -A series of API calls to ensure CRUD functionality <br /> 
--Fully designed test suits fo thr application <br />
+-Fully designed test suits fo the application <br />

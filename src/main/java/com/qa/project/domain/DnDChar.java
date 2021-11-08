@@ -3,17 +3,16 @@ package com.qa.project.domain;
 import javax.persistence.Entity;
 
 @Entity
-public class DnDCharacters {
+public class DnDChar {
 	private String name;
 	private String race;
 	private String job;
 	private Integer Age;
-	private Double hieght;
+	private Integer hieght;
 	private Double wieght;
 	private String alignment;
 
-	public DnDCharacters(String name, String race, String job, Integer age, Double hieght, Double wieght,
-			String alignment) {
+	public DnDChar(String name, String race, String job, Integer age, Integer hieght, Double wieght, String alignment) {
 		super();
 		this.name = name;
 		this.race = race;
@@ -56,11 +55,11 @@ public class DnDCharacters {
 		Age = age;
 	}
 
-	public Double getHieght() {
+	public Integer getHieght() {
 		return hieght;
 	}
 
-	public void setHieght(Double hieght) {
+	public void setHieght(Integer hieght) {
 		this.hieght = hieght;
 	}
 
@@ -82,8 +81,8 @@ public class DnDCharacters {
 
 	@Override
 	public String toString() {
-		return "DnDCharacters [name=" + name + ", race=" + race + ", job=" + job + ", Age=" + Age + ", hieght=" + hieght
-				+ ", wieght=" + wieght + ", alignment=" + alignment + "]";
+		return "Character: Name: " + name + ", Race: " + race + ", Class: " + job + ", Age: " + Age + ", Hieght(cm): "
+				+ hieght + ", Wieght(kg): " + wieght + ", Alignment: " + alignment;
 	}
 
 }
