@@ -1,13 +1,22 @@
 package com.qa.project.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
+
 public class DnDChar {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+
 	private String name;
 	private String race;
 	private String job;
-	private Integer Age;
+	private Integer age;
 	private Integer hieght;
 	private Double wieght;
 	private String alignment;
@@ -17,7 +26,7 @@ public class DnDChar {
 		this.name = name;
 		this.race = race;
 		this.job = job;
-		Age = age;
+		this.age = age;
 		this.hieght = hieght;
 		this.wieght = wieght;
 		this.alignment = alignment;
@@ -48,11 +57,11 @@ public class DnDChar {
 	}
 
 	public Integer getAge() {
-		return Age;
+		return age;
 	}
 
 	public void setAge(Integer age) {
-		Age = age;
+		this.age = age;
 	}
 
 	public Integer getHieght() {
@@ -81,7 +90,7 @@ public class DnDChar {
 
 	@Override
 	public String toString() {
-		return "Character: Name: " + name + ", Race: " + race + ", Class: " + job + ", Age: " + Age + ", Hieght(cm): "
+		return "Character: Name: " + name + ", Race: " + race + ", Class: " + job + ", Age: " + age + ", Hieght(cm): "
 				+ hieght + ", Wieght(kg): " + wieght + ", Alignment: " + alignment;
 	}
 
