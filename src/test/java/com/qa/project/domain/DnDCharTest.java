@@ -21,6 +21,12 @@ public class DnDCharTest {
 	}
 
 	@Test
+	public void dndCharTestID() {
+		DnDChar testChar2 = new DnDChar(1, "Test", "Race", "Tester", 30, 185, 60.6, "Lawful Neutral");
+		assertTrue(testChar2 instanceof DnDChar);
+	}
+
+	@Test
 	public void getNameTest() {
 		assertEquals("Test", testChar.getName(), "No Match");
 
