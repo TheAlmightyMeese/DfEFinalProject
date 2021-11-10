@@ -66,25 +66,25 @@ public class DnDCharTest {
 	}
 
 	@Test
-	public void getHieghtTest() {
-		assertEquals(185, testChar.getHieght(), "Macthed");
+	public void getHeightTest() {
+		assertEquals(185, testChar.getHeight(), "Macthed");
 	}
 
 	@Test
-	public void setHieghtTest() {
-		testChar.setHieght(1);
-		assertEquals(1, testChar.getHieght(), "No Match");
+	public void setHeightTest() {
+		testChar.setHeight(1);
+		assertEquals(1, testChar.getHeight(), "No Match");
 	}
 
 	@Test
-	public void getWieghtTest() {
-		assertEquals(60.6, testChar.getWieght(), "No Match");
+	public void getWeightTest() {
+		assertEquals(60.6, testChar.getWeight(), "No Match");
 	}
 
 	@Test
-	public void setWieghtTest() {
-		testChar.setWieght(1.1);
-		assertEquals(1.1, testChar.getWieght(), "No Match");
+	public void setWeightTest() {
+		testChar.setWeight(1.1);
+		assertEquals(1.1, testChar.getWeight(), "No Match");
 	}
 
 	@Test
@@ -101,7 +101,7 @@ public class DnDCharTest {
 	@Test
 	public void toStringTest() {
 		assertEquals(
-				"Character: Name: Test, Race: Race, Class: Tester, Age: 30, Hieght(cm): 185, Wieght(kg): 60.6, Alignment: Lawful Neutral",
+				"Character: Name: Test, Race: Race, Class: Tester, Age: 30, Height(cm): 185, Weight(kg): 60.6, Alignment: Lawful Neutral",
 				testChar.toString(), "Match");
 	}
 

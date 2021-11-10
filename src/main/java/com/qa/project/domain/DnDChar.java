@@ -6,7 +6,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-
 public class DnDChar {
 
 	@Id
@@ -17,19 +16,36 @@ public class DnDChar {
 	private String race;
 	private String job;
 	private Integer age;
-	private Integer hieght;
-	private Double wieght;
+	private Integer height;
+	private Double weight;
 	private String alignment;
 
-	public DnDChar(String name, String race, String job, Integer age, Integer hieght, Double wieght, String alignment) {
+	public DnDChar(String name, String race, String job, Integer age, Integer height, Double weight, String alignment) {
 		super();
 		this.name = name;
 		this.race = race;
 		this.job = job;
 		this.age = age;
-		this.hieght = hieght;
-		this.wieght = wieght;
+		this.height = height;
+		this.weight = weight;
 		this.alignment = alignment;
+	}
+
+	public DnDChar(Integer id, String name, String race, String job, Integer age, Integer height, Double weight,
+			String alignment) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.race = race;
+		this.job = job;
+		this.age = age;
+		this.height = height;
+		this.weight = weight;
+		this.alignment = alignment;
+	}
+
+	public DnDChar() {
+		super();
 	}
 
 	public String getName() {
@@ -64,20 +80,20 @@ public class DnDChar {
 		this.age = age;
 	}
 
-	public Integer getHieght() {
-		return hieght;
+	public Integer getHeight() {
+		return height;
 	}
 
-	public void setHieght(Integer hieght) {
-		this.hieght = hieght;
+	public void setHeight(Integer height) {
+		this.height = height;
 	}
 
-	public Double getWieght() {
-		return wieght;
+	public Double getWeight() {
+		return weight;
 	}
 
-	public void setWieght(Double wieght) {
-		this.wieght = wieght;
+	public void setWeight(Double weight) {
+		this.weight = weight;
 	}
 
 	public String getAlignment() {
@@ -90,8 +106,8 @@ public class DnDChar {
 
 	@Override
 	public String toString() {
-		return "Character: Name: " + name + ", Race: " + race + ", Class: " + job + ", Age: " + age + ", Hieght(cm): "
-				+ hieght + ", Wieght(kg): " + wieght + ", Alignment: " + alignment;
+		return "Character: Name: " + name + ", Race: " + race + ", Class: " + job + ", Age: " + age + ", Height(cm): "
+				+ height + ", Weight(kg): " + weight + ", Alignment: " + alignment;
 	}
 
 }
