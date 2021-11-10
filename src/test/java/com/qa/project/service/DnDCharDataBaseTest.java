@@ -9,14 +9,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import java.util.List;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
+import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.ResultMatcher;
@@ -26,6 +27,9 @@ import com.qa.project.domain.DnDChar;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
+@Sql(scripts = { "classpath:dndchar-schema.sql",
+		"classpath:dndchar-data.sql" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+@ActiveProfiles("test")
 public class DnDCharDataBaseTest {
 
 	@Autowired
@@ -33,16 +37,6 @@ public class DnDCharDataBaseTest {
 
 	@Autowired
 	private ObjectMapper mapper;
-
-	@BeforeEach
-	public void testSetupEntity() throws Exception {
-		DnDChar requestBody = new DnDChar("Test Char", "Test Race", "Test Class", 20, 180, 75.5, "Neutral Neutral");
-		String requestBodyAsJSON = this.mapper.writeValueAsString(requestBody);
-
-		RequestBuilder request = post("/characters/create").contentType(MediaType.APPLICATION_JSON)
-				.content(requestBodyAsJSON);
-		this.mvc.perform(request);
-	}
 
 	@Test
 	void testCreate() throws Exception {
@@ -76,7 +70,7 @@ public class DnDCharDataBaseTest {
 
 	@Test
 	void testFindChar() throws Exception {
-		RequestBuilder request = get("/characters/find/0");
+		RequestBuilder request = get("/characters/find/1");
 		ResultMatcher checkStatus = status().isOk();
 
 		DnDChar dndchar = new DnDChar("Test Char", "Test Race", "Test Class", 20, 180, 75.5, "Neutral Neutral");
@@ -92,7 +86,7 @@ public class DnDCharDataBaseTest {
 		DnDChar requestBody = new DnDChar("Test 2", "Race 2", "Class 2", 25, 180, 85.5, "Neutral Good");
 		String requestBodyAsJSON = this.mapper.writeValueAsString(requestBody);
 
-		RequestBuilder request = put("/characters/editChar/0").contentType(MediaType.APPLICATION_JSON)
+		RequestBuilder request = put("/characters/editChar/1").contentType(MediaType.APPLICATION_JSON)
 				.content(requestBodyAsJSON);
 
 		DnDChar responseBody = new DnDChar("Test 2", "Race 2", "Class 2", 25, 180, 85.5, "Neutral Good");
@@ -107,15 +101,10 @@ public class DnDCharDataBaseTest {
 
 	@Test
 	void testKill() throws Exception {
-		RequestBuilder request = delete("/characters/kill/0");
+		RequestBuilder request = delete("/characters/kill/1");
 		ResultMatcher checkStatus = status().isNoContent();
 
 		this.mvc.perform(request).andExpect(checkStatus);
 	}
 
-	@AfterEach
-	public void testClearTable() throws Exception {
-		RequestBuilder request = delete("/characters/kill/1");
-		this.mvc.perform(request);
-	}
 }

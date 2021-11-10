@@ -1,6 +1,6 @@
-drop table if exists 'dndchar' CASCADE;
+drop table if exists `dndchar` CASCADE;
 create table
- 'dndchar' 
+ `dndchar` 
  (
  id integer AUTO_INCREMENT,
   age integer not null,

@@ -58,14 +58,10 @@ public class DnDCharController {
 //Removes the entity from
 	@DeleteMapping("/kill/{id}")
 	public ResponseEntity<DnDChar> kill(@PathVariable Integer id) {
-		boolean removed = this.service.killChar(id);
-		if (removed) {
-			System.out.println("Number " + id + " on the list is no more");
-			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-		} else {
-			System.out.println("Something went wrong, I have failed");
-			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-		}
-		// prints to console on success or failure.
+		this.service.killChar(id);
+		System.out.println("Number " + id + " on the list is no more");
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+
 	}
+	// prints to console on success or failure.
 }
