@@ -42,7 +42,7 @@ public class DnDCharController {
 	}
 
 // retrieves a singly entry by its index number in the list
-	@GetMapping("/Character/{id}")
+	@GetMapping("/find/{id}")
 	public DnDChar findChar(@PathVariable Integer id) {
 		return this.service.findChar(id);
 // Status = Default 200 -ok
@@ -51,8 +51,8 @@ public class DnDCharController {
 //Calls upon editChar to replace the entry based on id
 	@PutMapping("/editChar/{id}")
 	public ResponseEntity<DnDChar> editChar(@PathVariable Integer id, @RequestBody DnDChar newDnDChar) {
-		DnDChar evolve = this.service.editChar(id, newDnDChar);
-		return new ResponseEntity<DnDChar>(evolve, HttpStatus.ACCEPTED);
+		DnDChar change = this.service.editChar(id, newDnDChar);
+		return new ResponseEntity<DnDChar>(change, HttpStatus.ACCEPTED);
 	}
 
 //Removes the entity from
