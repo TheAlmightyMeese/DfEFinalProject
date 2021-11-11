@@ -31,12 +31,16 @@ public class DnDCharDataBase implements DnDCharService {
 //Will print the full list of entities in the console
 	@Override
 	public List<DnDChar> listAll() {
+		System.out.println("Here is a list of all characters: ");
+		this.repo.findAll().stream().forEach(e -> System.out.println(e));
 		return this.repo.findAll();
 	}
 
 //will bring call and print based on the id of the entry 
 	@Override
 	public DnDChar findChar(Integer id) {
+		System.out.println("Retreiveing id " + id + " from Database");
+		System.out.println(this.repo.findById(id).toString());
 		return this.repo.findById(id).orElseThrow(() -> new EntityNotFoundException("Unable to find Character"));
 	}
 
