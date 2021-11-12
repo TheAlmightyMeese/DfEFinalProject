@@ -57,7 +57,7 @@ Alongside the SQL functionality a way to close the connection to the database wo
 <br />
 Showing Create through Postman, Confirmation of creation in console and in H2 Database.<br />
 
-<img src="https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/H2%20Function%20Console/2021-11-11%2014_12_30-Window.png">
+
 
 ![Create](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/H2%20Function%20Console/2021-11-11%2014_12_30-Window.png?raw=true)
 <br />
