@@ -73,16 +73,16 @@ Showing Delete through postman delete request. Removes an entry from the databas
 <br />
 ## Functionality on Local SQL server<br />
 <br />
-![Create](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_49_48-Window.png)
-![Read](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_50_59-Window.png)<br />
-![Read](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_51_15-Window.png)<br />
-![Update](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_51_41-Window.png)<br />
-![Delete](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_52_07-Window.png)<br />
+![Create](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_49_48-Window.png?raw=true)
+![Read](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_50_59-Window.png?raw=true)
+![Read](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_51_15-Window.png?raw=true)
+![Update](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_51_41-Window.png?raw=true)
+![Delete](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_52_07-Window.png?raw=true)
 <br />
 # Coverage Testing<br />
 <br />
 
-![Coverage](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/Test%20Coverage/Test_Coverage.png?raw=true)<br />
+![Coverage](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/ScreenshotsToReadMe/Documentation/Test%20Coverage/Test_Coverage.png?raw=true)
 <br />
 # Jira Board for Project<br />
 [Jira Board](https://dfes3richard.atlassian.net/jira/software/projects/RTP/boards/1).
