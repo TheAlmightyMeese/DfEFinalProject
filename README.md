@@ -97,7 +97,7 @@ Showing Delete through postman delete request. Removes an entry from the databas
 Achieved overall 98.4% coverage<br />
 <br />
 
-![Coverage](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/ScreenshotsToReadMe/Documentation/Test%20Coverage/Test_Coverage.png?raw=true)
+![Coverage](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/Test%20Coverage/Test_Coverage.png?raw=true)
 <br />
 
 # Jira Board for Project<br />
