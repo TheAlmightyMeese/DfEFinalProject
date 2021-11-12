@@ -12,7 +12,7 @@ Scope <br />
 -A relational database used to persist data <br />
 -A build of the application using an integrated build tool <br />
 -A series of API calls to ensure CRUD functionality <br /> 
--Fully designed test suits fo the application <br />
+-Fully designed test suits for the application <br />
 <br />
 <br />
 
@@ -94,7 +94,8 @@ Showing Delete through postman delete request. Removes an entry from the databas
 
 ### Coverage Testing<br />
 <br />
-Achieved overall 98.4% coverage
+Achieved overall 98.4% coverage<br />
+<br />
 
 ![Coverage](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/ScreenshotsToReadMe/Documentation/Test%20Coverage/Test_Coverage.png?raw=true)
 <br />
