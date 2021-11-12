@@ -43,6 +43,7 @@ Instead I enabled functionality for an in memory Database using H2 included in S
 A problem I did not expect to encounter was that by using the Spring Boot IDE instead of Eclipse with the Spring Add-on I did not have the add-on that allowed me to track Coverage of test code and had to add ECL Emma to my IDE.<br />
 When compiling my code into a .jar file maven created 2 .jar's. I chose the larger file and encountered an issue where the .jar couldnt find main. It was in fact the smaller .jar that worked without issue.
 <br />
+<br />
 **Possible Improvements**<br />
 <br />
 I wanted to add more functionality to the API. Namely adding a search by function that could call upon all entries that match e.g. find all dwarves.<br />
@@ -55,6 +56,9 @@ Alongside the SQL functionality a way to close the connection to the database wo
 **Functionality with H2 and cmd line** <br />
 <br />
 Showing Create through Postman, Confirmation of creation in console and in H2 Database.<br />
+
+<img src="https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/H2%20Function%20Console/2021-11-11%2014_12_30-Window.png">
+
 ![Create](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/H2%20Function%20Console/2021-11-11%2014_12_30-Window.png?raw=true)
 <br />
 Showing Read through postman, retrieving all entries via get request from the database and printing in cmd.<br />
