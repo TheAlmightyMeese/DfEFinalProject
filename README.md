@@ -15,24 +15,28 @@ Scope <br />
 -Fully designed test suits fo the application <br />
 <br />
 <br />
+
 ## Why am I doing this? <br />
 <br />
 This is a project to put into practice what I have learned through the QA Academy Software Skills Course.<br />
 By creating a small app that is capable of interacting with a Database while adhering to the practices of DevOps <br />
 provides an introduction to industry fundamental principles.<br />
 <br />
+
 ## How I expected the challenge to go<br />
 <br />
 Given the simplicity of the minimum viable product I was confident in my ability to write the app.<br />
 The biggest concern I had was adhering to best practice principles as I progressed.<br />
 Being new to Jira the project management was daunting. Planning the whole project without knowing the practices was difficult.<br />
 <br />
+
 ## What Went Well<br />
 <br />
 Creating the actual API went well. <br />
 Despite a moment of confusion when testing features using an ArrayList as soon as the Database functionality was introduced the Testing proceeded smoothly. Achieving an overall coverage of 98.4%.<br />
 I was able to successfully use all the elements of the project I am familiar with effectively.<br />
 <br />
+
 ## What Didn't Go As Planned<br />
 <br />
 I found Jira particularly difficult to use and get used to.<br />
@@ -44,6 +48,7 @@ A problem I did not expect to encounter was that by using the Spring Boot IDE in
 When compiling my code into a .jar file maven created 2 .jar's. I chose the larger file and encountered an issue where the .jar couldnt find main. It was in fact the smaller .jar that worked without issue.
 <br />
 <br />
+
 ## Possible Improvements<br />
 <br />
 I wanted to add more functionality to the API. Namely adding a search by function that could call upon all entries that match e.g. find all dwarves.<br />
@@ -52,8 +57,11 @@ Potentially a way to allow users to make this work with their own SQL needing to
 Alongside the SQL functionality a way to close the connection to the database would be nice to add.<br />
 <br />
 <br />
+
 # Functionality Screenshots<br />
+
 ## Functionality with H2 and cmd line <br />
+
 <br />
 Showing Create through Postman, Confirmation of creation in console and in H2 Database.<br />
 
@@ -71,14 +79,21 @@ Showing Update through postman put request. Replaces entry with a new object by 
 Showing Delete through postman delete request. Removes an entry from the database shown in cmd and H2 Database.<br />
 ![Delete](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/H2%20Function%20Console/2021-11-11%2014_14_58-Window.png?raw=true)
 <br />
+
 ## Functionality on Local SQL server<br />
 <br />
+
 ![Create](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_49_48-Window.png?raw=true)
+
 ![Read](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_50_59-Window.png?raw=true)
+
 ![Read](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_51_15-Window.png?raw=true)
+
 ![Update](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_51_41-Window.png?raw=true)
+
 ![Delete](https://github.com/TheAlmightyMeese/DfEFinalProject/blob/main/Documentation/SQL%20Persistance/2021-11-11%2014_52_07-Window.png?raw=true)
 <br />
+
 # Coverage Testing<br />
 <br />
 
